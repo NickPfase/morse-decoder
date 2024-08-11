@@ -39,6 +39,20 @@ const MORSE_TABLE = {
 
 function decode(expr) {
     // write your solution here
+    let k = expr.split('')
+    // .join('**********')
+    let str = []
+    for (let index = 0; index < k.length; index ++){
+        let r = k[index];
+        for ( let i = 0; i < Object.keys(MORSE_TABLE).length; i ++) {
+            let y = Object.keys(MORSE_TABLE)[i]
+            if (r === Object.values(MORSE_TABLE)[i]){
+                // return str.concat(y.split('').join('**********')
+                str.push(y)
+            } 
+            }
+    }
+    return str
 }
 
 module.exports = {
